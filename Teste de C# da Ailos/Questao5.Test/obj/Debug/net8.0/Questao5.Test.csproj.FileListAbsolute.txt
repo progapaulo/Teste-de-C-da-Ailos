@@ -1,0 +1,6 @@
+/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/bin/Debug/net8.0/CoverletSourceRootsMapping_Questao5.Test
+/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/obj/Debug/net8.0/Questao5.Test.csproj.AssemblyReference.cache
+/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/obj/Debug/net8.0/Questao5.Test.GeneratedMSBuildEditorConfig.editorconfig
+/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/obj/Debug/net8.0/Questao5.Test.AssemblyInfoInputs.cache
+/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/obj/Debug/net8.0/Questao5.Test.AssemblyInfo.cs
+/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/obj/Debug/net8.0/Questao5.Test.csproj.CoreCompileInputs.cache
