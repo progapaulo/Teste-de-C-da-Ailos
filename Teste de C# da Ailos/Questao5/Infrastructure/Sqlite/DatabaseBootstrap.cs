@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using System.Linq;
+using Dapper;
 using Microsoft.Data.Sqlite;
 
 namespace Questao5.Infrastructure.Sqlite

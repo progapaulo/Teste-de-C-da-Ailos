@@ -1,3 +1,5 @@
+using System;
+
 namespace Questao5.Application.Queries.Responses;
 
 public class SaldoResponse

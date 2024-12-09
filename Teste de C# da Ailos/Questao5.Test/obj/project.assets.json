@@ -6495,11 +6495,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/Questao5.Test.csproj",
+      "projectUniqueName": "/home/beto/Projetos/Teste-de-C-da-Ailos/Teste de C# da Ailos/Questao5.Test/Questao5.Test.csproj",
       "projectName": "Questao5.Test",
-      "projectPath": "/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/Questao5.Test.csproj",
+      "projectPath": "/home/beto/Projetos/Teste-de-C-da-Ailos/Teste de C# da Ailos/Questao5.Test/Questao5.Test.csproj",
       "packagesPath": "/home/beto/.nuget/packages/",
-      "outputPath": "/home/beto/Downloads/Teste de C# da Ailos/Questao5.Test/obj/",
+      "outputPath": "/home/beto/Projetos/Teste-de-C-da-Ailos/Teste de C# da Ailos/Questao5.Test/obj/",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
@@ -6516,8 +6516,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/beto/Downloads/Teste de C# da Ailos/Questao5/Questao5.csproj": {
-              "projectPath": "/home/beto/Downloads/Teste de C# da Ailos/Questao5/Questao5.csproj"
+            "/home/beto/Projetos/Teste-de-C-da-Ailos/Teste de C# da Ailos/Questao5/Questao5.csproj": {
+              "projectPath": "/home/beto/Projetos/Teste-de-C-da-Ailos/Teste de C# da Ailos/Questao5/Questao5.csproj"
             }
           }
         }

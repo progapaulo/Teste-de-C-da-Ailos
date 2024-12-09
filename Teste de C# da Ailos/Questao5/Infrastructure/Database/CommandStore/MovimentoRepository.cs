@@ -1,4 +1,5 @@
 using System.Data;
+using System.Threading.Tasks;
 using Dapper;
 using Questao5.Domain.Entities;
 using Questao5.Domain.Repositories;

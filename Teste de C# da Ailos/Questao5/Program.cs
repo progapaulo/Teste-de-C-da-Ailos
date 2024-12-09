@@ -2,7 +2,11 @@ using System.Data;
 using MediatR;
 using Questao5.Infrastructure.Sqlite;
 using System.Reflection;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Data.Sqlite;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Questao5.Domain.Repositories;
 using Questao5.Infrastructure.Database.CommandStore;
 
@@ -24,6 +28,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IDbConnection>(sp => new SqliteConnection("Data Source=database.sqlite"));
 builder.Services.AddScoped<IContaCorrenteRepository, ContaCorrenteRepository>();
 builder.Services.AddScoped<IMovimentoRepository, MovimentoRepository>();
+builder.Services.AddScoped<IIdempotenciaRepository, IdempotenciaRepository>();
 
 builder.Services.AddMediatR(typeof(Program));
 

@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Questao5.Domain.Entities;
 
 namespace Questao5.Domain.Repositories;

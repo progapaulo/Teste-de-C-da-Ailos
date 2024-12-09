@@ -1,7 +1,11 @@
+using System;
+using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Questao5.Application.Commands.Requests;
 using Questao5.Application.Queries.Requests;
+using Questao5.Domain.Repositories;
 
 namespace Questao5.Infrastructure.Services.Controllers;
 
@@ -10,10 +14,12 @@ namespace Questao5.Infrastructure.Services.Controllers;
 public class ContaCorrenteController : ControllerBase
 {
     private readonly IMediator _mediator;
-
-    public ContaCorrenteController(IMediator mediator)
+    private readonly IIdempotenciaRepository _idempotenciaRepository;
+    
+    public ContaCorrenteController(IMediator mediator, IIdempotenciaRepository idempotenciaRepository)
     {
         _mediator = mediator;
+        _idempotenciaRepository = idempotenciaRepository;
     }
 
     [HttpPost("movimentacao")]
@@ -21,7 +27,15 @@ public class ContaCorrenteController : ControllerBase
     {
         try
         {
+            var idempotencia = await _idempotenciaRepository.GetIdempotencyResultAsync(command.ChaveIdempotencia);
+            if (idempotencia != null)
+                return Ok(idempotencia.Resultado);
+
             var idMovimento = await _mediator.Send(command);
+            
+            await _idempotenciaRepository.SaveIdempotencyAsync(command.ChaveIdempotencia, 
+                JsonConvert.SerializeObject(command), idMovimento);
+
             return Ok(new { IdMovimento = idMovimento });
         }
         catch (ArgumentException ex)
